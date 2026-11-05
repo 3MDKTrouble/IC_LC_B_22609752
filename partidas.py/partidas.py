@@ -12,21 +12,22 @@ print("1 - Ver estatísticas")
 print("2 - Registar partida")
 print("3 - Sai")
 
-while True:
-    choice = input(str("Opção: "))
-    if choice(input()) == 1:
+choice = input(str("Opção: "))
+if choice == 1:
         print(input("Mapa a visualizar: "))
-    elif input() == 2:
+elif input() == 2:
         if mapas > [8]:
             print("Limite antigido")
-        while choice(input()) == 2:
-            print(input("Mapa: "))
-        mapas.append(input())
-        print(input("Pontos: "))
-        pontos.append(input())
+        while choice == 2:
+            new_map = input("Mapa a adicionar: ")
+        mapas.append(new_map)
+        new_score = input("Pontos a adicionar: ")
+        if new_score > 100:
+            print("Pontuação inválida")
+        pontos.append(new_score)
         print(mapas)
         print(pontos)
-    elif choice(input()) == 3:
+elif choice == 3:
         print("Até à próxima partida!")
-    else:
+else:
         print("Comando inválido")
